@@ -1,0 +1,189 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'General Sans', sans-serif;
+      background: #0a0a23;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Logo */
+    header {
+      margin-top: 1rem;
+    }
+
+    header img {
+      width: 70px; /* smaller */
+      height: 70px;
+      border-radius: 50%; /* rounded */
+      object-fit: cover;
+      /* background: white; neat circle */
+      padding: 8px; /* inner space */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .container {
+      max-width: 650px;
+      width: 100%;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Clash Display', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    /* Glass form */
+    .form {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      padding: 0.6rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+
+    input[type="email"] {
+      padding: 0.9rem 1rem;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      flex: 1;
+      font-size: 1rem;
+      font-family: 'General Sans', sans-serif;
+      background: transparent;
+      color: white;
+      min-width: 0;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    button {
+      padding: 0.9rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      color: #0a0a23;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'General Sans', sans-serif;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      flex-shrink: 0;
+    }
+
+    button:hover {
+      background: #f3f3f3;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+
+
+   /* Default: popup under button */
+.popup {
+  margin-top: 10px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: fit-content;
+}
+
+.popup.success {
+  background: #4caf50;
+  color: #fff;
+}
+
+.popup.error {
+  background: #f44336;
+  color: #fff;
+}
+
+.popup.show {
+  display: inline-block;
+  opacity: 1;
+}
+
+.close-btn {
+  margin-left: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* On smaller screens → make it a toast bottom-right */
+@media (max-width: 768px) {
+  .popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin-top: 0;
+    z-index: 9999;
+  }
+}
+
+
+
+
+    footer {
+      margin-top: auto;
+      padding: 1.5rem 0;
+    }
+
+    footer a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      color: #0a0a23;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    footer a:hover {
+      background: #e6e6e6;
+      transform: scale(1.1);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .form {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      button {
+        width: 100%;
+      }
+    }
