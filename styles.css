@@ -39,8 +39,8 @@
     }
 
     h1 {
-      font-family: 'Clash Display', sans-serif;
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-family:sans-serif;
+      font-size: clamp(1.3rem, 3vw, 1.6rem);
       font-weight: 700;
       margin: 2rem 0 1rem;
       line-height: 1.2;
